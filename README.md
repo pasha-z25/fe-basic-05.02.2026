@@ -1,1 +1,3 @@
-# fe-basic-05.02.2026
+# Front End Basic course
+
+### Lesson template
