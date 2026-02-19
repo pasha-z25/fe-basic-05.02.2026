@@ -1,5 +1,25 @@
+:root {
+  --container-size: 1110px;
+  --basic-space: 1rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--container-size) + (var(--basic-space) * 2));
+  padding-left: var(--basic-space);
+  padding-right: var(--basic-space);
+  margin-left: auto;
+  margin-right: auto;
 }
