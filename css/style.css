@@ -60,3 +60,11 @@ body {
 .mx-auto {
   margin-inline: auto;
 }
+
+.card {
+  width: 100%;
+  max-width: 250px;
+  border: 1px solid lightgrey;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
