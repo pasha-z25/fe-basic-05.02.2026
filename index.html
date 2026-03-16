@@ -5,22 +5,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <header></header>
-    <main>
-        <section>
-            <div class="container">
-                <h1>Lesson template</h1>
-                <img src="./image/cat.jpg" alt="Cat" width="500">
+<body class="gradient">
+    <header class="header">
+        <div class="container wide">
+            <div class="logo">
+                <a href="/">
+                    <img src="./images/Logo.png" alt="Hlegal logo">
+                </a>
             </div>
-        </section>
+            <div class="contacts-group">
+                <div class="language-group">
+                    <label class="language-item">
+                        <input type="radio" name="language" id="ua">
+                        <span class="label">ua</span>
+                    </label>
+                    <label class="language-item">
+                        <input type="radio" name="language" id="ru">
+                        <span class="label">ru</span>
+                    </label>
+                    <label class="language-item">
+                        <input type="radio" name="language" id="en">
+                        <span class="label">en</span>
+                    </label>
+                </div>
+                <span>Kyiv, Mechnikova str, 14/1</span>
+            </div>
+            <div class="navigation">
+                <div id="burger" class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">about us</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">services</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">team</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">publications</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-gradient">
+            <section class="hero-section">
+                <div class="container">
+                    <span></span>
+                    <h1 class="hero-title">you legal solutions provider</h1>
+                    <span class="scroll-down-icon">
+                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_22728_11340)">
+                                <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2" />
+                                <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_22728_11340">
+                                    <rect width="42" height="42" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </span>
+                </div>
+            </section>
+            <section class="tabs-section">
+                <div class="container">
+                    <div class="d-flex">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-Consistent-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-Consistent" type="button" role="tab"
+                                aria-controls="v-pills-Consistent" aria-selected="true">Consistent</button>
+                            <button class="nav-link" id="v-pills-CustomerOriented-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-CustomerOriented" type="button" role="tab"
+                                aria-controls="v-pills-CustomerOriented" aria-selected="false">Customer
+                                oriented</button>
+                            <button class="nav-link" id="v-pills-Innovative-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-Innovative" type="button" role="tab"
+                                aria-controls="v-pills-Innovative" aria-selected="false">Innovative</button>
+                            <button class="nav-link" id="v-pills-BusinessOriented-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-BusinessOriented" type="button" role="tab"
+                                aria-controls="v-pills-BusinessOriented" aria-selected="false">Business
+                                oriented</button>
+                        </div>
+                        <div class="tab-content align-self-center" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-Consistent" role="tabpanel"
+                                aria-labelledby="v-pills-Consistent-tab" tabindex="0">
+                                <h3 class="title">We turn the idea of legal services</h3>
+                                <p class="description">
+                                    Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex projects and achieve a number of important decisions for the industry. Many
+                                    of them form the practice of applying the law of the sea in Ukraine.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-CustomerOriented" role="tabpanel"
+                                aria-labelledby="v-pills-CustomerOriented-tab" tabindex="0">
+                                <h3 class="title">We turn the idea of legal services</h3>
+                                <p class="description">
+                                    Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex projects and achieve a number of important decisions for the industry. Many
+                                    of them form the practice of applying the law of the sea in Ukraine.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-Innovative" role="tabpanel"
+                                aria-labelledby="v-pills-Innovative-tab" tabindex="0">
+                                <h3 class="title">We turn the idea of legal services</h3>
+                                <p class="description">
+                                    Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex projects and achieve a number of important decisions for the industry. Many
+                                    of them form the practice of applying the law of the sea in Ukraine.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-BusinessOriented" role="tabpanel"
+                                aria-labelledby="v-pills-BusinessOriented-tab" tabindex="0">
+                                <h3 class="title">We turn the idea of legal services</h3>
+                                <p class="description">
+                                    Consolidating many years of experience and practice, the company's lawyers accompany
+                                    complex projects and achieve a number of important decisions for the industry. Many
+                                    of them form the practice of applying the law of the sea in Ukraine.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer></footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>
 
