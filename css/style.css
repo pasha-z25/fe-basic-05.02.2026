@@ -1,12 +1,12 @@
 :root {
-  --basic-font-family: "Montserrat", sans-serif;
+  --basic-font-family: 'Montserrat', sans-serif;
   --basic-font-size: 16px;
   --basic-font-weight: 400;
   --basic-line-height: 1.5;
   --basic-text-color: #000;
   --container-width: 1360px;
   --container-wide-width: 1600px;
-  --basic-space: 1rem;
+  --basic-space: 3.75rem;
 
   --primary-color: #f0145a;
 }
@@ -69,12 +69,7 @@ body {
 
 .main-gradient {
   position: relative;
-  background: linear-gradient(
-    228.57deg,
-    #323264 11.93%,
-    #323264 57.17%,
-    #643e72 87.46%
-  );
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
   color: #ffffff;
   border-radius: 0 0 12px 12px;
 }
@@ -82,7 +77,7 @@ body {
 .main-gradient::after {
   --left-position: 20px;
 
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 20px;
@@ -118,8 +113,8 @@ body {
   .container {
     display: grid;
     grid-template-areas:
-      "logo contact contact"
-      "logo nav nav";
+      'logo contact contact'
+      'logo nav nav';
   }
 
   .logo {
@@ -241,10 +236,10 @@ body {
   min-height: 100vh;
 
   background-image: image-set(
-    url("../images/Symbol.webp") 1x type("image/webp"),
-    url("../images/Symbol@2x.webp") 2x type("image/webp"),
-    url("../images/Symbol.png") 1x type("image/png"),
-    url("../images/Symbol@2x.png") 2x type("image/png")
+    url('../images/Symbol.webp') 1x type('image/webp'),
+    url('../images/Symbol@2x.webp') 2x type('image/webp'),
+    url('../images/Symbol.png') 1x type('image/png'),
+    url('../images/Symbol@2x.png') 2x type('image/png')
   );
   background-size: contain;
   background-repeat: no-repeat;
@@ -279,12 +274,12 @@ body {
 /* -------TABS SECTION------------------------------------------------------------- */
 
 .tabs-section {
-  padding-block: 60px;
+  padding-block: var(--basic-space);
 
   .nav {
-    min-width: calc(375px + 60px);
-    margin-right: 60px;
-    padding-right: 60px;
+    min-width: calc(375px + var(--basic-space));
+    margin-right: var(--basic-space);
+    padding-right: var(--basic-space);
     border-right: 4px solid rgba(255, 255, 255, 0.3);
 
     .nav-link {
@@ -296,11 +291,7 @@ body {
       text-align: right;
     }
     .nav-link.active {
-      background-image: linear-gradient(
-        90.13deg,
-        #ef8080 0.84%,
-        #f0145a 99.96%
-      );
+      background-image: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -323,80 +314,80 @@ body {
   }
 }
 
-/* -------ADAPTIVE------------------------------------------------------------- */
-@media (max-width: 992px) {
-  .header {
-    .container {
-      grid-template-areas:
-        "contact"
-        "logo "
-        "nav";
+/* -------Partners SECTION------------------------------------------------------------- */
 
-      .contacts-group {
-        justify-self: start;
-      }
-      .navigation {
-        justify-self: start;
+.our-partners {
+  .container {
+    padding: 0;
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 120px);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
 }
 
-@media (max-width: 552px) {
-  .header {
-    .container {
-      grid-template-areas:
-        "contact contact contact"
-        "logo logo nav";
+.blog-section {
+  padding-block: var(--basic-space);
+  background-color: #f5f5fa;
 
-      .contacts-group {
-        justify-self: stretch;
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .card {
+      border-radius: 8px;
+      background-color: #fff;
+      overflow: hidden;
+
+      .content {
+        padding: 30px;
       }
-      .navigation {
-        justify-self: end;
+
+      .card-title {
+        margin-bottom: 30px;
       }
-    }
-
-    .burger {
-      display: block;
-    }
-
-    .nav {
-      /* display: none; */
-      opacity: 0;
-      transition: all linear 0.3s;
-      visibility: hidden;
-      position: fixed;
-      z-index: -5;
-      inset: 0;
-      /* background-color: rgba(55, 55, 55, 0.8); */
-      background-color: #323264;
-      padding: 1rem;
-
-      .menu {
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-        gap: 3rem;
-        height: 100%;
-        font-size: 2rem;
-        background-color: #ffffff;
-        color: #24a3ff;
-        border-radius: 12px;
-        text-align: center;
-        transition: all linear 0.3s;
-        transform: translateY(100vh);
-      }
-    }
-    .burger.active + .nav {
-      /* display: block; */
-      opacity: 1;
-      visibility: visible;
-      z-index: 5;
-    }
-    .burger.active + .nav .menu {
-      transform: translateY(0);
     }
   }
+}
+
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  padding: var(--basic-space);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323264;
+
+  .modal-window {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+
+    .close {
+      cursor: pointer;
+      position: absolute;
+      font-size: 2rem;
+      top: 5px;
+      right: 15px;
+    }
+  }
+}
+
+.modal-wrapper.active {
+  display: flex;
 }
